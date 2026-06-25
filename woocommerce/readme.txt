@@ -4,7 +4,7 @@ Tags: online store, ecommerce, shop, shopping cart, sell online
 Requires at least: 6.9
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 10.7.0
+Stable tag: 10.8.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -132,7 +132,7 @@ Yes, you can! Join in on our [GitHub repository](https://github.com/woocommerce/
 
 = Where can I find REST API documentation? =
 
-Extensive [WooCommerce REST API Documentation](https://woocommerce.github.io/woocommerce-rest-api-docs/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=wp_org_repo_listing) is available on GitHub.
+Extensive [WooCommerce REST API Documentation](https://developer.woocommerce.com/docs/apis/rest-api/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=wp_org_repo_listing) is available.
 
 = My question is not listed here. Where can I find more answers? =
 
@@ -170,12 +170,11 @@ WooCommerce comes with some sample data you can use to see how products look; im
 
 == Changelog ==
 
-= 10.8.1 2026-05-27 =
+= 10.9.1 2026-06-24 =
 
 **WooCommerce**
 
-* Fix - Fix a fatal error during in-place upgrade to 10.8.0 caused by the new DefaultCustomerAddress enum being referenced from class-wc-settings-general.php before the in-process autoloader classmap is refreshed. [#65359](https://github.com/woocommerce/woocommerce/pull/65359)
-* Fix - Fix WooPayments onboarding business type dropdown crash. [#65345](https://github.com/woocommerce/woocommerce/pull/65345)
+* Fix - Remove get_entry_count() from the product feed FeedInterface to restore backward compatibility. Requiring the method broke third-party implementations (e.g. older WooCommerce Stripe Gateway versions) that implement the interface without it. The method remains available on JsonFileFeed. [#65972](https://github.com/woocommerce/woocommerce/pull/65972)
 
 
 [See changelog for all versions](https://raw.githubusercontent.com/woocommerce/woocommerce/trunk/changelog.txt).
