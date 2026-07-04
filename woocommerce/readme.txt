@@ -4,7 +4,7 @@ Tags: online store, ecommerce, shop, shopping cart, sell online
 Requires at least: 6.9
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 10.9.1
+Stable tag: 10.9.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -170,12 +170,11 @@ WooCommerce comes with some sample data you can use to see how products look; im
 
 == Changelog ==
 
-= 10.9.2 2026-07-02 =
+= 10.9.3 2026-07-03 =
 
 **WooCommerce**
 
-* Fix - Prevent update-time fatal errors by guarding new settings SDK classes and preserving the removed legacy settings API controller as a no-op compatibility stub. [#66081](https://github.com/woocommerce/woocommerce/pull/66081)
-* Update - Enable push notifications by default and deprecate feature flag. [#66088](https://github.com/woocommerce/woocommerce/pull/66088)
+* Fix - Fix a fatal error in WC_Email::send_notification() when a filtered mail callback returns a non-bool value. [#66219](https://github.com/woocommerce/woocommerce/pull/66219)
 
 
 [See changelog for all versions](https://raw.githubusercontent.com/woocommerce/woocommerce/trunk/changelog.txt).
